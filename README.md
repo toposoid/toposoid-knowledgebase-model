@@ -2,6 +2,8 @@
 This library defines a basic model commonly used in Toposoid projects.
 Toposoid is a knowledge base construction platform.(see [Toposoid　Root Project](https://github.com/toposoid/toposoid.git))
 
+[![Header Check Action](https://github.com/toposoid/toposoid-knowledgebase-model/actions/workflows/action.yml/badge.svg?branch=main)](https://github.com/toposoid/toposoid-knowledgebase-model/actions/workflows/action.yml)
+
 ## Requirements
 Scala version 2.12.x,   
 Sbt version 1.2.8
