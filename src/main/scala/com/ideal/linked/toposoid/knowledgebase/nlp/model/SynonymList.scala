@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
 import play.api.libs.json.Json
 
-case class SynonymList()
+case class SynonymList(synonyms:List[String])
 object SynonymList {
   implicit val jsonWrites = Json.writes[SynonymList]
   implicit val jsonReads = Json.reads[SynonymList]
