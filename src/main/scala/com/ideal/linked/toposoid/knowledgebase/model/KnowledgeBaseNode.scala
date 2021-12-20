@@ -43,6 +43,7 @@ import play.api.libs.json.Json
  * @param modalityType モダリティ（KNPのfeatureのモダリティ参照）
  * @param logicType (KNPの並列タイプ参照、その他包含関係はIMPという種別もあり)
  * @param nodeType com.ideal.linked.toposoid.common.SentenceType
+ * @param lang 言語のロケール
  * @param extentText 拡張領域
  */
 case class KnowledgeBaseNode(nodeId:String,
@@ -65,7 +66,8 @@ case class KnowledgeBaseNode(nodeId:String,
                              modalityType:String,
                              logicType:String,
                              nodeType:Int,
-                             extentText:String = "{}"
+                             lang:String,
+                             extentText:String = "{}",
                             )
 object KnowledgeBaseNode {
   implicit val jsonWrites = Json.writes[KnowledgeBaseNode]
