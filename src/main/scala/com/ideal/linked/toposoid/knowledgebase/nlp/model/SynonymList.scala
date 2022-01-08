@@ -14,18 +14,12 @@
  * limitations under the License.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.regist.model
+package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
 import play.api.libs.json.Json
 
-/**
- * Normal knnowledge model
- * @param sentence
- * @param lang
- * @param extentInfoJson
- */
-case class Knowledge(sentence:String, lang:String, extentInfoJson:String)
-object Knowledge {
-  implicit val jsonWrites = Json.writes[Knowledge]
-  implicit val jsonReads = Json.reads[Knowledge]
+case class SynonymList(synonyms:List[String])
+object SynonymList {
+  implicit val jsonWrites = Json.writes[SynonymList]
+  implicit val jsonReads = Json.reads[SynonymList]
 }
