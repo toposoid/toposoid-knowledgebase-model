@@ -24,7 +24,7 @@ import play.api.libs.json.Json
  * @param lang
  * @param extentInfoJson
  */
-case class Knowledge(sentence:String, lang:String, extentInfoJson:String)
+case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegative:Boolean=false)
 object Knowledge {
   implicit val jsonWrites = Json.writes[Knowledge]
   implicit val jsonReads = Json.reads[Knowledge]
