@@ -36,7 +36,7 @@ import play.api.libs.json.Json
  * @param rangeExpressions 範囲表現
  * @param categories カテゴリ（KNPのfeatureのカテゴリ参照）
  * @param domains ドメイン（KNPのfeatureのドメイン参照）
- * @param isDenial 否定表現を表すフラグ true/false (KNPのfeatureの否定参照)
+ * @param isDenialWord 否定表現を表すフラグ true/false (KNPのfeatureの否定参照)
  * @param isConditionalConnection 条件節及びそれに類する節を表すフラグ（KNPのfeatureの条件節候補参照）
  * @param normalizedNameYomi　文節の正規化表現の読み仮名
  * @param surfaceYomi 文節の表層の読み仮名
@@ -59,7 +59,7 @@ case class KnowledgeBaseNode(nodeId:String,
                              rangeExpressions:Map[String, Map[String, String]],
                              categories:Map[String,String],
                              domains:Map[String,String],
-                             isDenial:Boolean,
+                             isDenialWord:Boolean,
                              isConditionalConnection:Boolean,
                              normalizedNameYomi:String,
                              surfaceYomi:String,
