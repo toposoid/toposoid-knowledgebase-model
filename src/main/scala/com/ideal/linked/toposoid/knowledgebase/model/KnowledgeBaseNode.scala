@@ -68,6 +68,7 @@ case class KnowledgeBaseNode(nodeId:String,
                              nodeType:Int,
                              lang:String,
                              extentText:String = "{}",
+                             isNegativeSentence:Boolean=false
                             )
 object KnowledgeBaseNode {
   implicit val jsonWrites = Json.writes[KnowledgeBaseNode]
