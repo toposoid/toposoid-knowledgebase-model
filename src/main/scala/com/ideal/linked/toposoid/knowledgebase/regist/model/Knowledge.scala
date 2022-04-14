@@ -23,6 +23,7 @@ import play.api.libs.json.Json
  * @param sentence
  * @param lang
  * @param extentInfoJson
+ * @param isNegativeSentence　Currently, this property is always set to false when registering data.
  */
 case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegativeSentence:Boolean=false)
 object Knowledge {
