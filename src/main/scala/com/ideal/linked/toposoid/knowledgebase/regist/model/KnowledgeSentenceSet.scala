@@ -19,14 +19,15 @@ package com.ideal.linked.toposoid.knowledgebase.regist.model
 import play.api.libs.json.Json
 
 /**
- * Normal knnowledge model
- * @param sentence
- * @param lang
- * @param extentInfoJson
- * @param isNegativeSentence　Currently, this property is always set to false when registering data.
+ * This model used when registering natural sentences as a knowledge graph in the database
+ * @param premiseList Premise knowledge list
+ * @param premiseLogicRelation　List of Proposition Relations on the premise side
+ * @param claimList Claim knowledge list
+ * @param claimLogicRelation List of Proposition Relations on the premise side
  */
-case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegativeSentence:Boolean=false)
-object Knowledge {
-  implicit val jsonWrites = Json.writes[Knowledge]
-  implicit val jsonReads = Json.reads[Knowledge]
+case class KnowledgeSentenceSet(premiseList:List[Knowledge],premiseLogicRelation:List[PropositionRelation], claimList:List[Knowledge], claimLogicRelation:List[PropositionRelation])
+object KnowledgeSentenceSet {
+  implicit val jsonWrites = Json.writes[KnowledgeSentenceSet]
+  implicit val jsonReads = Json.reads[KnowledgeSentenceSet]
 }
+
