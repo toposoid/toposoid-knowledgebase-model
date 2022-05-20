@@ -14,6 +14,7 @@ sbt publishLocal
 ## Usage
 ```scala
 import com.ideal.linked.toposoid.knowledgebase.model._
+import com.ideal.linked.toposoid.knowledgebase.nlp.model._
 import com.ideal.linked.toposoid.knowledgebase.regist.model._
 ```
 
