@@ -16,6 +16,7 @@ sbt publishLocal
 import com.ideal.linked.toposoid.knowledgebase.model._
 import com.ideal.linked.toposoid.knowledgebase.nlp.model._
 import com.ideal.linked.toposoid.knowledgebase.regist.model._
+import com.ideal.linked.toposoid.knowledgebase.featurevector.model._
 ```
 
 ## Note
