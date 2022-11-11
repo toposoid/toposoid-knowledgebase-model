@@ -26,7 +26,7 @@ import play.api.libs.json.Json
  * @param epsilon Epsilon is used to determines how much to expand from search candidate radius.
  * @param timeout Timeout is used for search time deadline. The unit is nano-seconds.
  */
-case class MultiFeatureVectorForSearch(vectors:List[FeatureVectorForSearch], num:Int, radius:Float, epsilon:Float, timeout:Int)
+case class MultiFeatureVectorForSearch(vectors:List[FeatureVectorForSearch], num:Int, radius:Float, epsilon:Float, timeout:Long)
 object MultiFeatureVectorForSearch {
   implicit val jsonWrites = Json.writes[MultiFeatureVectorForSearch]
   implicit val jsonReads = Json.reads[MultiFeatureVectorForSearch]
