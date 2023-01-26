@@ -1,7 +1,7 @@
 import Dependencies._
 
 ThisBuild / scalaVersion     := "2.12.12"
-ThisBuild / version          := "0.4-SNAPSHOT"
+ThisBuild / version          := "0.4"
 ThisBuild / organization     := "com.ideal.linked"
 
 lazy val root = (project in file("."))
