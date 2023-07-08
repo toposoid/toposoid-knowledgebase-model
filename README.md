@@ -5,8 +5,8 @@ Toposoid is a knowledge base construction platform.(see [Toposoid　Root Project
 [![Header Check Action](https://github.com/toposoid/toposoid-knowledgebase-model/actions/workflows/action.yml/badge.svg?branch=main)](https://github.com/toposoid/toposoid-knowledgebase-model/actions/workflows/action.yml)
 
 ## Requirements
-Scala version 2.12.x,   
-Sbt version 1.2.8
+Scala version 2.13.x,   
+Sbt version 1.9.0
 
 ## Setup
 sbt publishLocal
