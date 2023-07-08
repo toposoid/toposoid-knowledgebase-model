@@ -7,7 +7,7 @@ ThisBuild / organization     := "com.ideal.linked"
 lazy val root = (project in file("."))
   .settings(
     name := "toposoid-knowledgebase-model",
-    libraryDependencies += "com.typesafe.play" %% "play" % "2.8.8",
+    libraryDependencies += "com.typesafe.play" %% "play" % "2.8.18",
     libraryDependencies += scalaTest % Test
   )
   .enablePlugins(AutomateHeaderPlugin)
