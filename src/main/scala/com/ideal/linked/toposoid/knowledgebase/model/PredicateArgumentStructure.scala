@@ -52,7 +52,7 @@ case class PredicateArgumentStructure(currentId: Int,
                                         morphemes:List[String]
                                      )
 
-object KnowledgeBaseNode {
+object PredicateArgumentStructure {
   implicit val jsonWrites = Json.writes[PredicateArgumentStructure]
   implicit val jsonReads = Json.reads[PredicateArgumentStructure]
 }
