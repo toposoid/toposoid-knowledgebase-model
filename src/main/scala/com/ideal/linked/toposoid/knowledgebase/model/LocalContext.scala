@@ -16,16 +16,16 @@
 
 package com.ideal.linked.toposoid.knowledgebase.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  *
- * @param lang 言語のロケール
- * @param namedEntity 固有表現（KNPのfeatureのNE参照）
- * @param rangeExpressions　数量の範囲表現　
- * @param categories カテゴリ（KNPのfeatureのカテゴリ参照）
- * @param domains ドメイン（KNPのfeatureのドメイン参照）
- * @param referenceIdMap キー：id名　バリュー:id
+ * @param lang language locale
+ * @param namedEntity named entity
+ * @param rangeExpressions　Quantity range representation
+ * @param categories Category (For Japanese, see the KNP feature category)
+ * @param domains Domain (For Japanese, refer to KNP's feature domain)
+ * @param referenceIdMap key：idName,　value:id
  */
 case class LocalContext(lang:String,
                         namedEntity: String,
@@ -36,6 +36,6 @@ case class LocalContext(lang:String,
                        )
 
 object LocalContext {
-  implicit val jsonWrites = Json.writes[LocalContext]
-  implicit val jsonReads = Json.reads[LocalContext]
+  implicit val jsonWrites: OWrites[LocalContext] = Json.writes[LocalContext]
+  implicit val jsonReads: Reads[LocalContext] = Json.reads[LocalContext]
 }

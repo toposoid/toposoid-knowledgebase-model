@@ -13,19 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.ideal.linked.toposoid.knowledgebase.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- * 文節に対する類義語を格納するためのモデル
- * @param sourceId 文節の正規化表現に対する類義語を識別するID
- * @param destinationId 類義語に対する文節を識別するID
- * @param similality 類似度（現在未使用）
+ *
+ * @param lang language locale
+ * @param referenceIdMap  key：idName,　value:id
  */
-case class KnowledgeBaseSynonymEdge(sourceId:String, destinationId:String, similality:Float)
-object KnowledgeBaseSynonymEdge {
-  implicit val jsonWrites: OWrites[KnowledgeBaseSynonymEdge] = Json.writes[KnowledgeBaseSynonymEdge]
-  implicit val jsonReads: Reads[KnowledgeBaseSynonymEdge] = Json.reads[KnowledgeBaseSynonymEdge]
+case class LocalContextForFeature(lang: String, referenceIdMap:Map[String, String],)
+
+object LocalContextForFeature {
+  implicit val jsonWrites: OWrites[LocalContextForFeature] = Json.writes[LocalContextForFeature]
+  implicit val jsonReads: Reads[LocalContextForFeature] = Json.reads[LocalContextForFeature]
 }
+
+

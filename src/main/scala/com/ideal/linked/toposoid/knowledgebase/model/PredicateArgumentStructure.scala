@@ -16,7 +16,7 @@
 
 package com.ideal.linked.toposoid.knowledgebase.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * @param currentId 文章の何番目の文節かを識別するID
@@ -53,6 +53,6 @@ case class PredicateArgumentStructure(currentId: Int,
                                      )
 
 object PredicateArgumentStructure {
-  implicit val jsonWrites = Json.writes[PredicateArgumentStructure]
-  implicit val jsonReads = Json.reads[PredicateArgumentStructure]
+  implicit val jsonWrites: OWrites[PredicateArgumentStructure] = Json.writes[PredicateArgumentStructure]
+  implicit val jsonReads: Reads[PredicateArgumentStructure] = Json.reads[PredicateArgumentStructure]
 }
