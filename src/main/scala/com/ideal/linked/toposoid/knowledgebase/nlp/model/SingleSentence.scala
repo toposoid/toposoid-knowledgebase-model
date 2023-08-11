@@ -16,11 +16,11 @@
 
 package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 case class SingleSentence(sentence:String)
 object SingleSentence {
-  implicit val jsonWrites = Json.writes[SingleSentence]
-  implicit val jsonReads = Json.reads[SingleSentence]
+  implicit val jsonWrites: OWrites[SingleSentence] = Json.writes[SingleSentence]
+  implicit val jsonReads: Reads[SingleSentence] = Json.reads[SingleSentence]
 }
 

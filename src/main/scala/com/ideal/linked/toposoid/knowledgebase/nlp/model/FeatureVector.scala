@@ -16,9 +16,9 @@
 
 package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 case class FeatureVector(vector:List[Float])
 object FeatureVector {
-  implicit val jsonWrites = Json.writes[FeatureVector]
-  implicit val jsonReads = Json.reads[FeatureVector]
+  implicit val jsonWrites: OWrites[FeatureVector] = Json.writes[FeatureVector]
+  implicit val jsonReads: Reads[FeatureVector] = Json.reads[FeatureVector]
 }

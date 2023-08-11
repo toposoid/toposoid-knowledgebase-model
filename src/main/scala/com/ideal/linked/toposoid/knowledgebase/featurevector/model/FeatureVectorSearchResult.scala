@@ -15,7 +15,7 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * For feature vector search results
@@ -24,6 +24,6 @@ import play.api.libs.json.Json
  */
 case class FeatureVectorSearchResult(ids:List[String], statusInfo:StatusInfo)
 object FeatureVectorSearchResult {
-  implicit val jsonWrites = Json.writes[FeatureVectorSearchResult]
-  implicit val jsonReads = Json.reads[FeatureVectorSearchResult]
+  implicit val jsonWrites: OWrites[FeatureVectorSearchResult] = Json.writes[FeatureVectorSearchResult]
+  implicit val jsonReads: Reads[FeatureVectorSearchResult] = Json.reads[FeatureVectorSearchResult]
 }

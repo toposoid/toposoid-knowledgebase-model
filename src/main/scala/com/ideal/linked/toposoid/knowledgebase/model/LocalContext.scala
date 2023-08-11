@@ -25,7 +25,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param rangeExpressions　Quantity range representation
  * @param categories Category (For Japanese, see the KNP feature category)
  * @param domains Domain (For Japanese, refer to KNP's feature domain)
- * @param referenceIdMap key：idName,　value:id
+ * @param knowledgeFeatureReference feature's information
  */
 case class LocalContext(lang:String,
                         namedEntity: String,

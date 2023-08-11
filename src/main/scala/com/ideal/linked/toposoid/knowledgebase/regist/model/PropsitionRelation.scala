@@ -16,7 +16,7 @@
 
 package com.ideal.linked.toposoid.knowledgebase.regist.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * A model that defines the logical relationships between knowledge
@@ -26,6 +26,6 @@ import play.api.libs.json.Json
  */
 case class PropositionRelation(operator:String, sourceIndex:Int, destinationIndex:Int)
 object PropositionRelation {
-  implicit val jsonWrites = Json.writes[PropositionRelation]
-  implicit val jsonReads = Json.reads[PropositionRelation]
+  implicit val jsonWrites: OWrites[PropositionRelation] = Json.writes[PropositionRelation]
+  implicit val jsonReads: Reads[PropositionRelation] = Json.reads[PropositionRelation]
 }

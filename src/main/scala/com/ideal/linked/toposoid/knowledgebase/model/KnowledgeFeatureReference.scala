@@ -21,14 +21,15 @@ import play.api.libs.json.{Json, OWrites, Reads}
 /**
  *
  * @param id
+ * @param featureDataType
  * @param url
  * @param source
- * @param featureType
- * @param inputType
+ * @param featureInputType
+ * @param extentText
  */
 case class KnowledgeFeatureReference(id:String, featureDataType:Int, url:String = "", source:String = "", featureInputType:Int = 0, extentText:String = "{}")
 
-object KnowledgeBaseNode {
+object KnowledgeFeatureReference {
   implicit val jsonWrites: OWrites[KnowledgeFeatureReference] = Json.writes[KnowledgeFeatureReference]
   implicit val jsonReads: Reads[KnowledgeFeatureReference] = Json.reads[KnowledgeFeatureReference]
 }

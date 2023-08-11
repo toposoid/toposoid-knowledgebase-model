@@ -16,7 +16,7 @@
 
 package com.ideal.linked.toposoid.knowledgebase.regist.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * This model used when registering natural sentences as a knowledge graph in the database
@@ -27,7 +27,7 @@ import play.api.libs.json.Json
  */
 case class KnowledgeSentenceSet(premiseList:List[Knowledge],premiseLogicRelation:List[PropositionRelation], claimList:List[Knowledge], claimLogicRelation:List[PropositionRelation])
 object KnowledgeSentenceSet {
-  implicit val jsonWrites = Json.writes[KnowledgeSentenceSet]
-  implicit val jsonReads = Json.reads[KnowledgeSentenceSet]
+  implicit val jsonWrites: OWrites[KnowledgeSentenceSet] = Json.writes[KnowledgeSentenceSet]
+  implicit val jsonReads: Reads[KnowledgeSentenceSet] = Json.reads[KnowledgeSentenceSet]
 }
 

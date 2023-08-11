@@ -15,7 +15,7 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * For deleting feature vectors
@@ -23,6 +23,6 @@ import play.api.libs.json.Json
  */
 case class FeatureVectorId(id:String)
 object FeatureVectorId {
-  implicit val jsonWrites = Json.writes[FeatureVectorId]
-  implicit val jsonReads = Json.reads[FeatureVectorId]
+  implicit val jsonWrites: OWrites[FeatureVectorId] = Json.writes[FeatureVectorId]
+  implicit val jsonReads: Reads[FeatureVectorId] = Json.reads[FeatureVectorId]
 }

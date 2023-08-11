@@ -27,7 +27,6 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param sentenceId ID that identifies a sentence in a sentence set as a proposition
  * @param predicateArgumentStructure Predicate argument structure analysis result
  * @param localContext localContext
- * @param extentText Extended information area
  */
 case class KnowledgeBaseNode(nodeId:String,
                               propositionId:String,

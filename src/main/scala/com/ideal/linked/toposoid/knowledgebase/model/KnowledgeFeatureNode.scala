@@ -25,7 +25,6 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param sentence sentence
  * @param sentenceType com.ideal.linked.toposoid.common.SentenceType
  * @param localContextForFeature localContextForFeature
- * @param extentText Extended information area
  */
 case class KnowledgeFeatureNode(nodeId: String,
                                 propositionId: String,

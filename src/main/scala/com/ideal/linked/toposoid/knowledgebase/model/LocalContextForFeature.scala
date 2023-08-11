@@ -18,10 +18,11 @@ package com.ideal.linked.toposoid.knowledgebase.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
+
 /**
  *
  * @param lang language locale
- * @param referenceIdMap  key：idName,　value:id
+ * @param knowledgeFeatureReference feature's information
  */
 case class LocalContextForFeature(lang: String, knowledgeFeatureReference: List[KnowledgeFeatureReference])
 
