@@ -24,7 +24,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param lang language locale
  * @param knowledgeFeatureReference feature's information
  */
-case class LocalContextForFeature(lang: String, knowledgeFeatureReference: List[KnowledgeFeatureReference])
+case class LocalContextForFeature(lang: String, knowledgeFeatureReferences: List[KnowledgeFeatureReference])
 
 object LocalContextForFeature {
   implicit val jsonWrites: OWrites[LocalContextForFeature] = Json.writes[LocalContextForFeature]
