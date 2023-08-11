@@ -32,7 +32,7 @@ case class LocalContext(lang:String,
                         rangeExpressions: Map[String, Map[String, String]],
                         categories: Map[String, String],
                         domains: Map[String, String],
-                        referenceIdMap:Map[String, String]
+                        knowledgeFeatureReference: List[KnowledgeFeatureReference]
                        )
 
 object LocalContext {

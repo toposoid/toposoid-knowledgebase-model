@@ -32,8 +32,7 @@ case class KnowledgeFeatureNode(nodeId: String,
                                 sentenceId: String,
                                 sentence: String,
                                 sentenceType:Int,
-                                localContextForFeature: LocalContextForFeature,
-                                extentText:String = "{}"
+                                localContextForFeature: LocalContextForFeature
                                )
 
 object KnowledgeFeatureNode {

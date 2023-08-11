@@ -33,8 +33,7 @@ case class KnowledgeBaseNode(nodeId:String,
                               propositionId:String,
                               sentenceId:String,
                               predicateArgumentStructure:PredicateArgumentStructure,
-                              localContext:LocalContext,
-                              extentText:String = "{}",
+                              localContext:LocalContext
                             )
 object KnowledgeBaseNode {
   implicit val jsonWrites: OWrites[KnowledgeBaseNode] = Json.writes[KnowledgeBaseNode]
