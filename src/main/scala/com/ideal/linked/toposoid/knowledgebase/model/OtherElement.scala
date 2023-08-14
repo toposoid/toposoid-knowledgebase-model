@@ -16,7 +16,7 @@
 
 package com.ideal.linked.toposoid.knowledgebase.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * KnowledgeBaseNode, KnowledgeBaseEdge, KnowledgeBaseSynonymNode, KnowledgeBaseSynonymEdge以外の情報を格納するモデル
@@ -24,7 +24,7 @@ import play.api.libs.json.Json
  */
 case class OtherElement(element:String)
 object OtherElement {
-  implicit val jsonWrites = Json.writes[OtherElement]
-  implicit val jsonReads = Json.reads[OtherElement]
+  implicit val jsonWrites: OWrites[OtherElement] = Json.writes[OtherElement]
+  implicit val jsonReads: Reads[OtherElement] = Json.reads[OtherElement]
 }
 

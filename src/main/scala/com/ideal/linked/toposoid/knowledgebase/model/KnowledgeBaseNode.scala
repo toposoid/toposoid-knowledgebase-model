@@ -16,27 +16,25 @@
 
 package com.ideal.linked.toposoid.knowledgebase.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- * 日本語の文章を述語項構造解析した結果を格納するためのモデル
- * ref.
+ *　A model for storing the results of predicate-argument structure analysis of sentences
+ * ref. Japanese
  * https://nlp.ist.i.kyoto-u.ac.jp/?plugin=attach&refer=KNP&openfile=knp_feature.pdf
- * @param nodeId 文章の文節を識別するID
- * @param propositionId 命題としての文章集合を識別するID
- * @param sentenceId 命題としての文章集合中の文章を識別するID
- * @param predicateArgumentStructure
- * @param localContext
- * @param extentText 拡張領域
+ * @param nodeId ID that identifies the clause of the sentence
+ * @param propositionId D that identifies a sentence set as a proposition
+ * @param sentenceId ID that identifies a sentence in a sentence set as a proposition
+ * @param predicateArgumentStructure Predicate argument structure analysis result
+ * @param localContext localContext
  */
 case class KnowledgeBaseNode(nodeId:String,
                               propositionId:String,
                               sentenceId:String,
                               predicateArgumentStructure:PredicateArgumentStructure,
-                              localContext:LocalContext,
-                              extentText:String = "{}",
+                              localContext:LocalContext
                             )
 object KnowledgeBaseNode {
-  implicit val jsonWrites = Json.writes[KnowledgeBaseNode]
-  implicit val jsonReads = Json.reads[KnowledgeBaseNode]
+  implicit val jsonWrites: OWrites[KnowledgeBaseNode] = Json.writes[KnowledgeBaseNode]
+  implicit val jsonReads: Reads[KnowledgeBaseNode] = Json.reads[KnowledgeBaseNode]
 }

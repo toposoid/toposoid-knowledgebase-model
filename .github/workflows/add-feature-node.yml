@@ -2,12 +2,12 @@ name: Header Check
 on:
   push:
     branches:
-      - refactor-knowledge-model
+      - add-feature-node
   workflow_dispatch:
 env:
   PJ_ACTOR: toposoid
   PJ_REPO: toposoid-knowledgebase-model
-  PJ_BRANCH: refactor-knowledge-model
+  PJ_BRANCH: add-feature-node
   PJ_VERSION: 0.5-SNAPSHOT
 jobs:
   header-check_toposoid-knowledgebase-model:

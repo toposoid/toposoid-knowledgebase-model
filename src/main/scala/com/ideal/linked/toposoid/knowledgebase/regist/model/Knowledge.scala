@@ -16,7 +16,7 @@
 
 package com.ideal.linked.toposoid.knowledgebase.regist.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * Normal knnowledge model
@@ -27,6 +27,6 @@ import play.api.libs.json.Json
  */
 case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegativeSentence:Boolean=false)
 object Knowledge {
-  implicit val jsonWrites = Json.writes[Knowledge]
-  implicit val jsonReads = Json.reads[Knowledge]
+  implicit val jsonWrites: OWrites[Knowledge] = Json.writes[Knowledge]
+  implicit val jsonReads: Reads[Knowledge] = Json.reads[Knowledge]
 }
