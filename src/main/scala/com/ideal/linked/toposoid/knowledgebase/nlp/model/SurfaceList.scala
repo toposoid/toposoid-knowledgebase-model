@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class SurfaceList(synonyms:List[String])
+case class SurfaceList(surfaces:List[String])
 object SurfaceList {
   implicit val jsonWrites: OWrites[SurfaceList] = Json.writes[SurfaceList]
   implicit val jsonReads: Reads[SurfaceList] = Json.reads[SurfaceList]
