@@ -15,15 +15,12 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
+
 import play.api.libs.json.{Json, OWrites, Reads}
 
-/**
- * For updating(create, update) feature vectors.
- * @param id
- * @param vector
- */
-case class FeatureVectorForUpdate(featureVectorIdentifier: FeatureVectorIdentifier, vector: List[Float])
-object FeatureVectorForUpdate {
-  implicit val jsonWrites: OWrites[FeatureVectorForUpdate] = Json.writes[FeatureVectorForUpdate]
-  implicit val jsonReads: Reads[FeatureVectorForUpdate] = Json.reads[FeatureVectorForUpdate]
+case class FeatureVectorIdentifier(propositionId:String, featureId:String, sentenceType:Int, lang:String)
+
+object FeatureVectorIdentifier {
+  implicit val jsonWrites: OWrites[FeatureVectorIdentifier] = Json.writes[FeatureVectorIdentifier]
+  implicit val jsonReads: Reads[FeatureVectorIdentifier] = Json.reads[FeatureVectorIdentifier]
 }

@@ -24,7 +24,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param similarities
  * @param statusInfo
  */
-case class FeatureVectorSearchResult(ids:List[String], similarities:List[Float], statusInfo:StatusInfo)
+case class FeatureVectorSearchResult(ids:List[FeatureVectorIdentifier], similarities:List[Float], statusInfo:StatusInfo)
 object FeatureVectorSearchResult {
   implicit val jsonWrites: OWrites[FeatureVectorSearchResult] = Json.writes[FeatureVectorSearchResult]
   implicit val jsonReads: Reads[FeatureVectorSearchResult] = Json.reads[FeatureVectorSearchResult]
