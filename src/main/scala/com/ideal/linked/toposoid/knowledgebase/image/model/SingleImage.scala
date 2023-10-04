@@ -14,19 +14,13 @@
  * limitations under the License.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.regist.model
+package com.ideal.linked.toposoid.knowledgebase.image.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-/**
- * Normal knnowledge model
- * @param sentence
- * @param lang
- * @param extentInfoJson
- * @param isNegativeSentence　Currently, this property is always set to false when registering data.
- */
-case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegativeSentence:Boolean=false, KnowledgeForImages:List[KnowledgeForImage]=List.empty[KnowledgeForImage])
-object Knowledge {
-  implicit val jsonWrites: OWrites[Knowledge] = Json.writes[Knowledge]
-  implicit val jsonReads: Reads[Knowledge] = Json.reads[Knowledge]
+case class SingleImage(url:String)
+
+object SingleImage {
+  implicit val jsonWrites: OWrites[SingleImage] = Json.writes[SingleImage]
+  implicit val jsonReads: Reads[SingleImage] = Json.reads[SingleImage]
 }
