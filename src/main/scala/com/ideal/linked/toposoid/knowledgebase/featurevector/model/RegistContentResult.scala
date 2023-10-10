@@ -16,9 +16,10 @@
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
 
+import com.ideal.linked.toposoid.knowledgebase.regist.model.KnowledgeForImage
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class RegistContentResult(url:String, statusInfo: StatusInfo)
+case class RegistContentResult(knowledgeForImage:KnowledgeForImage, /*knowledgeForOther:knowledgeForOther, //The Other is a feature */ statusInfo: StatusInfo)
 object RegistContentResult {
   implicit val jsonWrites: OWrites[RegistContentResult] = Json.writes[RegistContentResult]
   implicit val jsonReads: Reads[RegistContentResult] = Json.reads[RegistContentResult]
