@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.regist.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class Reference(url:String, surface:String, surfaceIndex: Int, isWholeSentence:Boolean)
+case class Reference(url:String, surface:String, surfaceIndex: Int, isWholeSentence:Boolean, originalUrlOrReference:String)
 object Reference {
   implicit val jsonWrites: OWrites[Reference] = Json.writes[Reference]
   implicit val jsonReads: Reads[Reference] = Json.reads[Reference]
