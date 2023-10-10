@@ -25,7 +25,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param extentInfoJson
  * @param isNegativeSentence　Currently, this property is always set to false when registering data.
  */
-case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegativeSentence:Boolean=false, KnowledgeForImages:List[KnowledgeForImage]=List.empty[KnowledgeForImage])
+case class Knowledge(sentence:String, lang:String, extentInfoJson:String, isNegativeSentence:Boolean=false, knowledgeForImages:List[KnowledgeForImage]=List.empty[KnowledgeForImage])
 object Knowledge {
   implicit val jsonWrites: OWrites[Knowledge] = Json.writes[Knowledge]
   implicit val jsonReads: Reads[Knowledge] = Json.reads[Knowledge]
