@@ -26,7 +26,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param sentenceType com.ideal.linked.toposoid.common.SentenceType
  * @param localContextForFeature localContextForFeature
  */
-case class KnowledgeFeatureNode(nodeId: String,
+case class KnowledgeBaseSemiGlobalNode(nodeId: String,
                                 propositionId: String,
                                 sentenceId: String,
                                 sentence: String,
@@ -34,7 +34,7 @@ case class KnowledgeFeatureNode(nodeId: String,
                                 localContextForFeature: LocalContextForFeature
                                )
 
-object KnowledgeFeatureNode {
-  implicit val jsonWrites: OWrites[KnowledgeFeatureNode] = Json.writes[KnowledgeFeatureNode]
-  implicit val jsonReads: Reads[KnowledgeFeatureNode] = Json.reads[KnowledgeFeatureNode]
+object KnowledgeBaseSemiGlobalNode {
+  implicit val jsonWrites: OWrites[KnowledgeBaseSemiGlobalNode] = Json.writes[KnowledgeBaseSemiGlobalNode]
+  implicit val jsonReads: Reads[KnowledgeBaseSemiGlobalNode] = Json.reads[KnowledgeBaseSemiGlobalNode]
 }
