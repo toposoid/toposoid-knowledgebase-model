@@ -20,7 +20,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
 
 case class KnowledgeBaseGlobalEdge(sourceId:String, destinationId:String)
 
-object KnowledgeBaseGlobalNode {
+object KnowledgeBaseGlobalEdge {
   implicit val jsonWrites: OWrites[KnowledgeBaseGlobalEdge] = Json.writes[KnowledgeBaseGlobalEdge]
   implicit val jsonReads: Reads[KnowledgeBaseGlobalEdge] = Json.reads[KnowledgeBaseGlobalEdge]
 }
