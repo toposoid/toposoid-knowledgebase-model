@@ -24,7 +24,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param destinationId
  * @param similality
  */
-case class KnowledgeFeatureReferenceEdge(sourceId:String, destinationId:String, similarity:Float)
+case class KnowledgeFeatureReferenceEdge(sourceId:String, destinationId:String)
 
 object KnowledgeFeatureReferenceEdge {
   implicit val jsonWrites: OWrites[KnowledgeFeatureReferenceEdge] = Json.writes[KnowledgeFeatureReferenceEdge]
