@@ -19,9 +19,7 @@ package com.ideal.linked.toposoid.knowledgebase.model
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- *　A model for storing the results of predicate-argument structure analysis of sentences
- * ref. Japanese
- * https://nlp.ist.i.kyoto-u.ac.jp/?plugin=attach&refer=KNP&openfile=knp_feature.pdf
+ *　
  * @param nodeId ID that identifies the clause of the sentence
  * @param propositionId D that identifies a sentence set as a proposition
  * @param sentenceId ID that identifies a sentence in a sentence set as a proposition

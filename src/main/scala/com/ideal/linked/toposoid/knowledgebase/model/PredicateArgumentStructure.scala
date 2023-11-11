@@ -19,6 +19,9 @@ package com.ideal.linked.toposoid.knowledgebase.model
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
+ * A model for storing the results of predicate-argument structure analysis of sentences
+ * ref. Japanese
+ * https://nlp.ist.i.kyoto-u.ac.jp/?plugin=attach&refer=KNP&openfile=knp_feature.pdf
  * @param currentId 文章の何番目の文節かを識別するID
  * @param parentId 当該の文節が係っている文節のID
  * @param isMainSection 文末を表すフラグ ture/false
