@@ -25,9 +25,8 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param caseStr　Relations between clauses (case structure, etc.)
  * @param dependType ref. KnowledgeBaseNodeのdependType
  * @param logicType　ref. KnowledgeBaseNodeのlogicType
- * @param lang language locale
  */
-case class KnowledgeBaseEdge(sourceId:String, destinationId:String, caseStr:String, dependType:String, logicType:String, lang:String)
+case class KnowledgeBaseEdge(sourceId:String, destinationId:String, caseStr:String, dependType:String, logicType:String)
 object KnowledgeBaseEdge {
   implicit val jsonWrites: OWrites[KnowledgeBaseEdge] = Json.writes[KnowledgeBaseEdge]
   implicit val jsonReads: Reads[KnowledgeBaseEdge] = Json.reads[KnowledgeBaseEdge]
