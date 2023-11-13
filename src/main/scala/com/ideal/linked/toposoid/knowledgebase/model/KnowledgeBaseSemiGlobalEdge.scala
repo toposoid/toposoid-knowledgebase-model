@@ -23,9 +23,8 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param sourceId ID that identifies the parent of the dependency in a relationship between feature nodes
  * @param destinationId　An ID that identifies a dependency child in a relationship between feature nodes
  * @param logicType ref. KnowledgeBaseNodeのdependType
- * @param lang lang language locale
  */
-case class KnowledgeBaseSemiGlobalEdge(sourceId:String, destinationId:String, logicType:String, lang:String)
+case class KnowledgeBaseSemiGlobalEdge(sourceId:String, destinationId:String, logicType:String)
 
 object KnowledgeBaseSemiGlobalEdge {
   implicit val jsonWrites: OWrites[KnowledgeBaseSemiGlobalEdge] = Json.writes[KnowledgeBaseSemiGlobalEdge]
