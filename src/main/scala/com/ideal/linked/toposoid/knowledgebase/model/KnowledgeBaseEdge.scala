@@ -26,7 +26,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param dependType ref. KnowledgeBaseNodeのdependType
  * @param logicType　ref. KnowledgeBaseNodeのlogicType
  */
-case class KnowledgeBaseEdge(sourceId:String, destinationId:String, caseStr:String, dependType:String, logicType:String)
+case class KnowledgeBaseEdge(sourceId:String, destinationId:String, caseStr:String, dependType:String, parallelType:String, logicType:String)
 object KnowledgeBaseEdge {
   implicit val jsonWrites: OWrites[KnowledgeBaseEdge] = Json.writes[KnowledgeBaseEdge]
   implicit val jsonReads: Reads[KnowledgeBaseEdge] = Json.reads[KnowledgeBaseEdge]
