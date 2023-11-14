@@ -34,7 +34,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param normalizedNameYomi 文節の正規化表現の読み仮名
  * @param surfaceYomi 文節の表層の読み仮名
  * @param modalityType モダリティ（KNPのfeatureのモダリティ参照）
- * @param logicType (KNPの並列タイプ参照、その他包含関係はIMPという種別もあり)
+ * @param parallelType (KNPの並列タイプ参照)
  * @param nodeType com.ideal.linked.toposoid.common.SentenceType
  * @param morphemes 形態素解析結果
  */
@@ -50,7 +50,7 @@ case class PredicateArgumentStructure(currentId: Int,
                                         normalizedNameYomi: String,
                                         surfaceYomi: String,
                                         modalityType: String,
-                                        logicType: String,
+                                        parallelType: String,
                                         nodeType: Int,
                                         morphemes:List[String]
                                      )
