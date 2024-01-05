@@ -21,6 +21,6 @@ import play.api.libs.json.{Json, OWrites, Reads}
 case class InputSentenceForSearch(sentence:String, lang:String, similarity:Float)
 
 object InputSentenceForSearch {
-  implicit val jsonWrites: OWrites[InputImageForSearch] = Json.writes[InputImageForSearch]
-  implicit val jsonReads: Reads[InputImageForSearch] = Json.reads[InputImageForSearch]
+  implicit val jsonWrites: OWrites[InputSentenceForSearch] = Json.writes[InputSentenceForSearch]
+  implicit val jsonReads: Reads[InputSentenceForSearch] = Json.reads[InputSentenceForSearch]
 }
