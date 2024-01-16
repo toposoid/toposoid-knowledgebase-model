@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.search.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class InputSentenceForSearch(sentence:String, lang:String, similarity:Float)
+case class InputSentenceForSearch(sentence:String, lang:String, similarityThreshold:Float)
 
 object InputSentenceForSearch {
   implicit val jsonWrites: OWrites[InputSentenceForSearch] = Json.writes[InputSentenceForSearch]
