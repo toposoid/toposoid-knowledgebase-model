@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.regist.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class ImageReference(reference:Reference, x:Int, y:Int, weight:Int, height:Int)
+case class ImageReference(reference:Reference, x:Int, y:Int, width:Int, height:Int)
 object ImageReference {
   implicit val jsonWrites: OWrites[ImageReference] = Json.writes[ImageReference]
   implicit val jsonReads: Reads[ImageReference] = Json.reads[ImageReference]
