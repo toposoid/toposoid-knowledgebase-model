@@ -1,5 +1,5 @@
 version: '3'
 services:
   toposoid-knowledgebase-model:
-    image: toposoid-knowledgebase-model:0.5-SNAPSHOT
+    image: toposoid-knowledgebase-model:0.5
     tty: true
