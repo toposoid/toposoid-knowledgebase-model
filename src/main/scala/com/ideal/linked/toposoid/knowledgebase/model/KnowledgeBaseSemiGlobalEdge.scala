@@ -19,13 +19,14 @@ package com.ideal.linked.toposoid.knowledgebase.model
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- * 文節に対する類義語を格納するためのモデル
- * @param sourceId 文節の正規化表現に対する類義語を識別するID
- * @param destinationId 類義語に対する文節を識別するID
- * @param similality 類似度（現在未使用）
+ * A model that expresses the relationship of feature nodes
+ * @param sourceId ID that identifies the parent of the dependency in a relationship between feature nodes
+ * @param destinationId　An ID that identifies a dependency child in a relationship between feature nodes
+ * @param logicType ref. KnowledgeBaseNodeのdependType
  */
-case class KnowledgeBaseSynonymEdge(sourceId:String, destinationId:String, similality:Float)
-object KnowledgeBaseSynonymEdge {
-  implicit val jsonWrites: OWrites[KnowledgeBaseSynonymEdge] = Json.writes[KnowledgeBaseSynonymEdge]
-  implicit val jsonReads: Reads[KnowledgeBaseSynonymEdge] = Json.reads[KnowledgeBaseSynonymEdge]
+case class KnowledgeBaseSemiGlobalEdge(sourceId:String, destinationId:String, logicType:String)
+
+object KnowledgeBaseSemiGlobalEdge {
+  implicit val jsonWrites: OWrites[KnowledgeBaseSemiGlobalEdge] = Json.writes[KnowledgeBaseSemiGlobalEdge]
+  implicit val jsonReads: Reads[KnowledgeBaseSemiGlobalEdge] = Json.reads[KnowledgeBaseSemiGlobalEdge]
 }

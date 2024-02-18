@@ -14,18 +14,13 @@
  * limitations under the License.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.regist.model
+package com.ideal.linked.toposoid.knowledgebase.featurevector.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-/**
- * A model that defines the logical relationships between knowledge
- * @param operator Logical relationship between knowledge. [AND, OR]
- * @param sourceIndex Index of the source clause
- * @param destinationIndex Index of the destination clause
- */
-case class PropositionRelation(operator:String, sourceIndex:Int, destinationIndex:Int)
-object PropositionRelation {
-  implicit val jsonWrites: OWrites[PropositionRelation] = Json.writes[PropositionRelation]
-  implicit val jsonReads: Reads[PropositionRelation] = Json.reads[PropositionRelation]
+case class FeatureVectorIdentifier(propositionId:String, featureId:String, sentenceType:Int, lang:String)
+
+object FeatureVectorIdentifier {
+  implicit val jsonWrites: OWrites[FeatureVectorIdentifier] = Json.writes[FeatureVectorIdentifier]
+  implicit val jsonReads: Reads[FeatureVectorIdentifier] = Json.reads[FeatureVectorIdentifier]
 }

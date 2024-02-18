@@ -16,20 +16,19 @@
 
 package com.ideal.linked.toposoid.knowledgebase.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- * 日本語の文章を述語項構造解析した結果を格納するためのモデル
- * @param sourceId 文節間の関係で係受けの子を識別するID
- * @param destinationId　文節間の関係で係受けの親を識別するID
- * @param caseStr　文節間の関係（格構造 etc）
- * @param dependType KnowledgeBaseNodeのdependType参照
- * @param logicType　KnowledgeBaseNodeのlogicType参照
- * @param lang 言語のロケール
+ * A model for storing the results of predicate-argument structure analysis of sentences
+ * @param sourceId ID that identifies the child of the dependency in the relation between clauses
+ * @param destinationId　ID that identifies the dependent parent in the relation between clauses
+ * @param caseStr　Relations between clauses (case structure, etc.)
+ * @param dependType ref. KnowledgeBaseNodeのdependType
+ * @param logicType　ref. KnowledgeBaseNodeのlogicType
  */
-case class KnowledgeBaseEdge(sourceId:String, destinationId:String, caseStr:String, dependType:String, logicType:String, lang:String)
+case class KnowledgeBaseEdge(sourceId:String, destinationId:String, caseStr:String, dependType:String, parallelType:String, hasInclusion:Boolean,  logicType:String)
 object KnowledgeBaseEdge {
-  implicit val jsonWrites = Json.writes[KnowledgeBaseEdge]
-  implicit val jsonReads = Json.reads[KnowledgeBaseEdge]
+  implicit val jsonWrites: OWrites[KnowledgeBaseEdge] = Json.writes[KnowledgeBaseEdge]
+  implicit val jsonReads: Reads[KnowledgeBaseEdge] = Json.reads[KnowledgeBaseEdge]
 }
 

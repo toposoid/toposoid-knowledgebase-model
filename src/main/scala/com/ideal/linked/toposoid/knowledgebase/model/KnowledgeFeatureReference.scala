@@ -14,18 +14,22 @@
  * limitations under the License.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.regist.model
+package com.ideal.linked.toposoid.knowledgebase.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- * A model that defines the logical relationships between knowledge
- * @param operator Logical relationship between knowledge. [AND, OR]
- * @param sourceIndex Index of the source clause
- * @param destinationIndex Index of the destination clause
+ *
+ * @param id
+ * @param featureType
+ * @param url
+ * @param source
+ * @param featureInputType
+ * @param extentText
  */
-case class PropositionRelation(operator:String, sourceIndex:Int, destinationIndex:Int)
-object PropositionRelation {
-  implicit val jsonWrites: OWrites[PropositionRelation] = Json.writes[PropositionRelation]
-  implicit val jsonReads: Reads[PropositionRelation] = Json.reads[PropositionRelation]
+case class KnowledgeFeatureReference(propositionId:String, sentenceId:String, featureId:String, featureType:Int, url:String = "", source:String = "", featureInputType:Int = 0, extentText:String = "{}")
+
+object KnowledgeFeatureReference {
+  implicit val jsonWrites: OWrites[KnowledgeFeatureReference] = Json.writes[KnowledgeFeatureReference]
+  implicit val jsonReads: Reads[KnowledgeFeatureReference] = Json.reads[KnowledgeFeatureReference]
 }

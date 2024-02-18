@@ -14,18 +14,13 @@
  * limitations under the License.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.regist.model
+package com.ideal.linked.toposoid.knowledgebase.search.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-/**
- * A model that defines the logical relationships between knowledge
- * @param operator Logical relationship between knowledge. [AND, OR]
- * @param sourceIndex Index of the source clause
- * @param destinationIndex Index of the destination clause
- */
-case class PropositionRelation(operator:String, sourceIndex:Int, destinationIndex:Int)
-object PropositionRelation {
-  implicit val jsonWrites: OWrites[PropositionRelation] = Json.writes[PropositionRelation]
-  implicit val jsonReads: Reads[PropositionRelation] = Json.reads[PropositionRelation]
+case class InputImageForSearch(url:String, lang:String, similarityThreshold:Float, isUploaded:Boolean)
+
+object InputImageForSearch {
+  implicit val jsonWrites: OWrites[InputImageForSearch] = Json.writes[InputImageForSearch]
+  implicit val jsonReads: Reads[InputImageForSearch] = Json.reads[InputImageForSearch]
 }

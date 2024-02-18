@@ -15,7 +15,7 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * Status Information
@@ -24,7 +24,7 @@ import play.api.libs.json.Json
  */
 case class StatusInfo(status:String, message:String)
 object StatusInfo {
-  implicit val jsonWrites = Json.writes[StatusInfo]
-  implicit val jsonReads = Json.reads[StatusInfo]
+  implicit val jsonWrites: OWrites[StatusInfo] = Json.writes[StatusInfo]
+  implicit val jsonReads: Reads[StatusInfo] = Json.reads[StatusInfo]
 }
 

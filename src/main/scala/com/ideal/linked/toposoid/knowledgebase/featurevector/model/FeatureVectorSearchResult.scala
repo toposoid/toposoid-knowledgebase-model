@@ -15,15 +15,17 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
+
 
 /**
- * For feature vector search results
+ *  For feature vector search results
  * @param ids
+ * @param similarities
  * @param statusInfo
  */
-case class FeatureVectorSearchResult(ids:List[String], statusInfo:StatusInfo)
+case class FeatureVectorSearchResult(ids:List[FeatureVectorIdentifier], similarities:List[Float], statusInfo:StatusInfo)
 object FeatureVectorSearchResult {
-  implicit val jsonWrites = Json.writes[FeatureVectorSearchResult]
-  implicit val jsonReads = Json.reads[FeatureVectorSearchResult]
+  implicit val jsonWrites: OWrites[FeatureVectorSearchResult] = Json.writes[FeatureVectorSearchResult]
+  implicit val jsonReads: Reads[FeatureVectorSearchResult] = Json.reads[FeatureVectorSearchResult]
 }

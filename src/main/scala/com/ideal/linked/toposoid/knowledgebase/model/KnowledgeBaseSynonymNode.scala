@@ -16,17 +16,18 @@
 
 package com.ideal.linked.toposoid.knowledgebase.model
 
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * 文節に対する類義語を格納するためのモデル
  * @param nodeId 類義語を識別するID
  * @param nodeName 類義語
  * @param propositionId KnowledgeBaseNodeのpropositionId参照
+ * @param sentenceId KnowledgeBaseNodeのsentenceId参照
  */
-case class KnowledgeBaseSynonymNode(nodeId:String, nodeName:String, propositionId:String)
+case class KnowledgeBaseSynonymNode(nodeId:String, nodeName:String, propositionId:String, sentenceId:String)
 object KnowledgeBaseSynonymNode {
-  implicit val jsonWrites = Json.writes[KnowledgeBaseSynonymNode]
-  implicit val jsonReads = Json.reads[KnowledgeBaseSynonymNode]
+  implicit val jsonWrites: OWrites[KnowledgeBaseSynonymNode] = Json.writes[KnowledgeBaseSynonymNode]
+  implicit val jsonReads: Reads[KnowledgeBaseSynonymNode] = Json.reads[KnowledgeBaseSynonymNode]
 }
 
