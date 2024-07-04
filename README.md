@@ -19,6 +19,7 @@ import com.ideal.linked.toposoid.knowledgebase.image.model._
 import com.ideal.linked.toposoid.knowledgebase.regist.model._
 import com.ideal.linked.toposoid.knowledgebase.featurevector.model._
 import com.ideal.linked.toposoid.knowledgebase.search.model._
+import com.ideal.linked.toposoid.knowledgebase.state.model._
 ```
 
 ## Note

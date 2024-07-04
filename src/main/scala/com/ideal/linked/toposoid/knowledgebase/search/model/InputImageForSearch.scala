@@ -16,9 +16,10 @@
 
 package com.ideal.linked.toposoid.knowledgebase.search.model
 
+import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class InputImageForSearch(url:String, lang:String, similarityThreshold:Float, isUploaded:Boolean)
+case class InputImageForSearch(url:String, lang:String, similarityThreshold:Float, isUploaded:Boolean, transversalState:TransversalState)
 
 object InputImageForSearch {
   implicit val jsonWrites: OWrites[InputImageForSearch] = Json.writes[InputImageForSearch]
