@@ -15,13 +15,14 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
+import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
  * For searching feature vectors.
  * @param vector　
  */
-case class FeatureVectorForSearch(vector: List[Float])
+case class FeatureVectorForSearch(vector: List[Float], transversalState:TransversalState)
 object FeatureVectorForSearch {
   implicit val jsonWrites: OWrites[FeatureVectorForSearch] = Json.writes[FeatureVectorForSearch]
   implicit val jsonReads: Reads[FeatureVectorForSearch] = Json.reads[FeatureVectorForSearch]

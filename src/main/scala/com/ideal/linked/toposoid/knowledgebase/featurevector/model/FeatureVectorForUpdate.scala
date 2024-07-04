@@ -15,6 +15,7 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
+import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
@@ -22,7 +23,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param id
  * @param vector
  */
-case class FeatureVectorForUpdate(featureVectorIdentifier: FeatureVectorIdentifier, vector: List[Float])
+case class FeatureVectorForUpdate(featureVectorIdentifier: FeatureVectorIdentifier, vector: List[Float], transversalState:TransversalState)
 object FeatureVectorForUpdate {
   implicit val jsonWrites: OWrites[FeatureVectorForUpdate] = Json.writes[FeatureVectorForUpdate]
   implicit val jsonReads: Reads[FeatureVectorForUpdate] = Json.reads[FeatureVectorForUpdate]

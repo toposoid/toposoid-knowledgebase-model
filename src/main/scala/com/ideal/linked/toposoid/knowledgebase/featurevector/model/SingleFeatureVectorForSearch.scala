@@ -15,6 +15,7 @@
  */
 
 package com.ideal.linked.toposoid.knowledgebase.featurevector.model
+import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
@@ -26,7 +27,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param epsilon Epsilon is used to determines how much to expand from search candidate radius.
  * @param timeout Timeout is used for search time deadline. The unit is nano-seconds.
  */
-case class SingleFeatureVectorForSearch(vector:List[Float], num:Int)
+case class SingleFeatureVectorForSearch(vector:List[Float], num:Int, transversalState:TransversalState)
 object SingleFeatureVectorForSearch {
   implicit val jsonWrites: OWrites[SingleFeatureVectorForSearch] = Json.writes[SingleFeatureVectorForSearch]
   implicit val jsonReads: Reads[SingleFeatureVectorForSearch] = Json.reads[SingleFeatureVectorForSearch]

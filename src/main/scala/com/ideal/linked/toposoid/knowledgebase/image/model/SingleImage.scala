@@ -16,9 +16,10 @@
 
 package com.ideal.linked.toposoid.knowledgebase.image.model
 
+import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class SingleImage(url:String)
+case class SingleImage(url:String, transversalState:TransversalState)
 
 object SingleImage {
   implicit val jsonWrites: OWrites[SingleImage] = Json.writes[SingleImage]

@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package com.ideal.linked.toposoid.knowledgebase.state.model
 
-package com.ideal.linked.toposoid.knowledgebase.regist.model
-
-import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class KnowledgeForImage(id:String, imageReference:ImageReference, transversalState:TransversalState)
-object KnowledgeForImage {
-  implicit val jsonWrites: OWrites[KnowledgeForImage] = Json.writes[KnowledgeForImage]
-  implicit val jsonReads: Reads[KnowledgeForImage] = Json.reads[KnowledgeForImage]
+case class TransversalState(username:String)
+object TransversalState {
+  implicit val jsonWrites: OWrites[TransversalState] = Json.writes[TransversalState]
+  implicit val jsonReads: Reads[TransversalState] = Json.reads[TransversalState]
 }

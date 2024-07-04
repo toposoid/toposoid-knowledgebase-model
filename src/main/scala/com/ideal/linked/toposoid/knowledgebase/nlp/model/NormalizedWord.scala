@@ -16,9 +16,10 @@
 
 package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
+import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class NormalizedWord(word:String)
+case class NormalizedWord(word:String, transversalState:TransversalState)
 object NormalizedWord {
   implicit val jsonWrites: OWrites[NormalizedWord] = Json.writes[NormalizedWord]
   implicit val jsonReads: Reads[NormalizedWord] = Json.reads[NormalizedWord]
