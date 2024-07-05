@@ -16,10 +16,9 @@
 
 package com.ideal.linked.toposoid.knowledgebase.regist.model
 
-import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class KnowledgeForImage(id:String, imageReference:ImageReference, transversalState:TransversalState)
+case class KnowledgeForImage(id:String, imageReference:ImageReference)
 object KnowledgeForImage {
   implicit val jsonWrites: OWrites[KnowledgeForImage] = Json.writes[KnowledgeForImage]
   implicit val jsonReads: Reads[KnowledgeForImage] = Json.reads[KnowledgeForImage]

@@ -16,7 +16,6 @@
 
 package com.ideal.linked.toposoid.knowledgebase.regist.model
 
-import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
@@ -26,7 +25,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param claimList Claim knowledge list
  * @param claimLogicRelation List of Proposition Relations on the premise side
  */
-case class KnowledgeSentenceSet(premiseList:List[Knowledge],premiseLogicRelation:List[PropositionRelation], claimList:List[Knowledge], claimLogicRelation:List[PropositionRelation], transversalState:TransversalState)
+case class KnowledgeSentenceSet(premiseList:List[Knowledge],premiseLogicRelation:List[PropositionRelation], claimList:List[Knowledge], claimLogicRelation:List[PropositionRelation])
 object KnowledgeSentenceSet {
   implicit val jsonWrites: OWrites[KnowledgeSentenceSet] = Json.writes[KnowledgeSentenceSet]
   implicit val jsonReads: Reads[KnowledgeSentenceSet] = Json.reads[KnowledgeSentenceSet]
