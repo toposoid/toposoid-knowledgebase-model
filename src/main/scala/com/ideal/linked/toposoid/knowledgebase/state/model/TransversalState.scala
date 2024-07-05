@@ -23,3 +23,4 @@ object TransversalState {
   implicit val jsonWrites: OWrites[TransversalState] = Json.writes[TransversalState]
   implicit val jsonReads: Reads[TransversalState] = Json.reads[TransversalState]
 }
+

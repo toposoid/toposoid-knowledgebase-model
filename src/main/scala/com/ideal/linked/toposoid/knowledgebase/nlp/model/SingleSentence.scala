@@ -16,10 +16,9 @@
 
 package com.ideal.linked.toposoid.knowledgebase.nlp.model
 
-import com.ideal.linked.toposoid.knowledgebase.state.model.TransversalState
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class SingleSentence(sentence:String, transversalState:TransversalState)
+case class SingleSentence(sentence:String)
 object SingleSentence {
   implicit val jsonWrites: OWrites[SingleSentence] = Json.writes[SingleSentence]
   implicit val jsonReads: Reads[SingleSentence] = Json.reads[SingleSentence]
