@@ -18,9 +18,9 @@ package com.ideal.linked.toposoid.knowledgebase.regist.rdb.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class DocumentAnalysisResultRecord(documentId:String, originalFilename:String,totalSeparatedNumber:Int)
-object DocumentAnalysisResultRecord {
-  implicit val jsonWrites: OWrites[DocumentAnalysisResultRecord] = Json.writes[DocumentAnalysisResultRecord]
-  implicit val jsonReads: Reads[DocumentAnalysisResultRecord] = Json.reads[DocumentAnalysisResultRecord]
+case class DocumentAnalysisResultStatesRecord(stateId:Long, name:String)
+object DocumentAnalysisResultStatesRecord {
+  implicit val jsonWrites: OWrites[DocumentAnalysisResultStatesRecord] = Json.writes[DocumentAnalysisResultStatesRecord]
+  implicit val jsonReads: Reads[DocumentAnalysisResultStatesRecord] = Json.reads[DocumentAnalysisResultStatesRecord]
 }
 
