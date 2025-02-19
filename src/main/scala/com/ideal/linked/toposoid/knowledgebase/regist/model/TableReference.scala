@@ -19,7 +19,7 @@ package com.ideal.linked.toposoid.knowledgebase.regist.model
 import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
- * 
+ *
  * @param reference
  */
 case class TableReference(reference:Reference)
