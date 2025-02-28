@@ -26,9 +26,9 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param sentenceType com.ideal.linked.toposoid.common.SentenceType
  * @param localContextForFeature localContextForFeature
  */
-case class KnowledgeBaseSemiGlobalNode(nodeId: String,
+case class KnowledgeBaseSemiGlobalNode(sentenceId: String,
                                 propositionId: String,
-                                sentenceId: String,
+                                documentId: String,
                                 sentence: String,
                                 sentenceType:Int,
                                 localContextForFeature: LocalContextForFeature
