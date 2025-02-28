@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.model
+package com.ideal.linked.toposoid.knowledgebase.regist.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class KnowledgeBaseGlobalNode(documentId: String, filename:String, url:String, titleOfTopPage:String, totalPageNum:Int)
-
-object KnowledgeBaseGlobalNode {
-  implicit val jsonWrites: OWrites[KnowledgeBaseGlobalNode] = Json.writes[KnowledgeBaseGlobalNode]
-  implicit val jsonReads: Reads[KnowledgeBaseGlobalNode] = Json.reads[KnowledgeBaseGlobalNode]
+case class KnowledgeForDocument(id:String, filename:String, url:String, titleOfTopPage:String, documentReferences:List[DocumentReference])
+object KnowledgeForDocument {
+  implicit val jsonWrites: OWrites[KnowledgeForDocument] = Json.writes[KnowledgeForDocument]
+  implicit val jsonReads: Reads[KnowledgeForDocument] = Json.reads[KnowledgeForDocument]
 }
