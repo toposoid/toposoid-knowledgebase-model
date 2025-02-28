@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.regist.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class KnowledgeForDocument(documentId:String, filename:String, url:String, titleOfTopPage:String, documentReferences:List[DocumentReference])
+case class KnowledgeForDocument(id:String, filename:String, url:String, titleOfTopPage:String, documentReferences:List[DocumentReference])
 object KnowledgeForDocument {
   implicit val jsonWrites: OWrites[KnowledgeForDocument] = Json.writes[KnowledgeForDocument]
   implicit val jsonReads: Reads[KnowledgeForDocument] = Json.reads[KnowledgeForDocument]
