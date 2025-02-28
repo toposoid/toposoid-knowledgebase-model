@@ -36,8 +36,10 @@ case class Knowledge(
                       isNegativeSentence:Boolean=false,
                       knowledgeForImages:List[KnowledgeForImage]=List.empty[KnowledgeForImage],
                       knowledgeForTables: List[KnowledgeForTable]=List.empty[KnowledgeForTable],
-                      KnowledgeForDocument: KnowledgeForDocument = KnowledgeForDocument(id="", filename="", url="", titleOfTopPage="", documentReferences=List.empty[DocumentReference])
+                      knowledgeForDocument: KnowledgeForDocument = KnowledgeForDocument(documentId = "", filename = "", url = "", titleOfTopPage = "", documentReferences = List.empty[DocumentReference])
 )
+
+
 object Knowledge {
   implicit val jsonWrites: OWrites[Knowledge] = Json.writes[Knowledge]
   implicit val jsonReads: Reads[Knowledge] = Json.reads[Knowledge]
