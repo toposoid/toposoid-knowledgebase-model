@@ -36,7 +36,7 @@ case class Knowledge(
                       isNegativeSentence:Boolean=false,
                       knowledgeForImages:List[KnowledgeForImage]=List.empty[KnowledgeForImage],
                       knowledgeForTables: List[KnowledgeForTable]=List.empty[KnowledgeForTable],
-                      knowledgeForDocument: KnowledgeForDocument = KnowledgeForDocument(documentId = "", filename = "", url = "", titleOfTopPage = "", documentReferences = List.empty[DocumentReference])
+                      knowledgeForDocument: KnowledgeForDocument = KnowledgeForDocument(id = "", filename = "", url = "", titleOfTopPage = "", documentReferences = List.empty[DocumentReference])
 )
 
 
