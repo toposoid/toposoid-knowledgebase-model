@@ -41,7 +41,7 @@ case class Knowledge(
 )
 
 
-object Knowledge { =
+object Knowledge {
   implicit val jsonWrites: OWrites[Knowledge] = Json.writes[Knowledge]
   implicit val jsonReads: Reads[Knowledge] = Json.reads[Knowledge]
 }
