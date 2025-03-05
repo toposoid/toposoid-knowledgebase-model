@@ -18,7 +18,7 @@ package com.ideal.linked.toposoid.knowledgebase.featurevector.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class FeatureVectorIdentifier(superiorId:String, featureId:String, sentenceType:Int, lang:String, superiorType:Int)
+case class FeatureVectorIdentifier(superiorId:String, featureId:String, sentenceType:Int, lang:String, superiorType:Int, nonSentenceType:Int)
 
 object FeatureVectorIdentifier {
   implicit val jsonWrites: OWrites[FeatureVectorIdentifier] = Json.writes[FeatureVectorIdentifier]
