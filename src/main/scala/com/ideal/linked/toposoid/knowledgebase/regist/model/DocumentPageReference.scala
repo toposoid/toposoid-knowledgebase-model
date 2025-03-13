@@ -25,7 +25,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param references
  * @param tableOfContents
  */
-case class DocumentPageReference(pageNo: Int, references: List[String]=List.empty[String], tableOfContents: List[String] = List.empty[String])
+case class DocumentPageReference(pageNo: Int, references: List[String]=List.empty[String], tableOfContents: List[String] = List.empty[String], headlines:List[String] = List.empty[String])
 
 object DocumentPageReference {
   implicit val jsonWrites: OWrites[DocumentPageReference] = Json.writes[DocumentPageReference]
