@@ -15,13 +15,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.featurevector.model
+package com.ideal.linked.toposoid.knowledgebase.regist.model
 
-import com.ideal.linked.toposoid.knowledgebase.regist.model.KnowledgeForImage
 import play.api.libs.json.{Json, OWrites, Reads}
 
-case class RegistContentResult(knowledgeForImage:KnowledgeForImage, /*knowledgeForOther:knowledgeForOther, //The Other is a feature */ statusInfo: StatusInfo)
-object RegistContentResult {
-  implicit val jsonWrites: OWrites[RegistContentResult] = Json.writes[RegistContentResult]
-  implicit val jsonReads: Reads[RegistContentResult] = Json.reads[RegistContentResult]
+/**
+ *
+ * @param id
+ * @param tableReference
+ */
+case class KnowledgeForTable(id: String, tableReference: TableReference)
+object KnowledgeForTable {
+  implicit val jsonWrites: OWrites[KnowledgeForTable] = Json.writes[KnowledgeForTable]
+  implicit val jsonReads: Reads[KnowledgeForTable] = Json.reads[KnowledgeForTable]
 }
