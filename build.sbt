@@ -1,14 +1,14 @@
 import Dependencies._
 import de.heikoseeberger.sbtheader.License
 
-ThisBuild / scalaVersion     := "2.13.11"
+ThisBuild / scalaVersion     := "3.3.6"
 ThisBuild / version          := "0.7-SNAPSHOT"
 ThisBuild / organization     := "com.ideal.linked"
 
 lazy val root = (project in file("."))
   .settings(
     name := "toposoid-knowledgebase-model",
-    libraryDependencies += "com.typesafe.play" %% "play" % "2.8.18",
+    libraryDependencies += "org.playframework" %% "play" % "3.0.9",
     libraryDependencies += scalaTest % Test
   )
   .enablePlugins(AutomateHeaderPlugin)
