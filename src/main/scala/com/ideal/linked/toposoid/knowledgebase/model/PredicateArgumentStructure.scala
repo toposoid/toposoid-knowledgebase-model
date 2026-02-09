@@ -38,6 +38,9 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param parallelType (KNPの並列タイプ参照)
  * @param nodeType com.ideal.linked.toposoid.common.SentenceType
  * @param morphemes 形態素解析結果
+ * @param caseGroupType 主要な格グループのタイプ Not used in the community version
+ * @param casePhraseId 主要な格グループのフレーズを識別するID Not used in the community version
+ * @param casePhrase 主要な格グループのフレーズ　Not used in the community version
  */
 case class PredicateArgumentStructure(currentId: Int,
                                         parentId: Int,
@@ -53,7 +56,10 @@ case class PredicateArgumentStructure(currentId: Int,
                                         modalityType: String,
                                         parallelType: String,
                                         nodeType: Int,
-                                        morphemes:List[String]
+                                        morphemes:List[String],
+                                        caseGroupType: Int,
+                                        casePhraseId: String,
+                                        casePhrase: String
                                      )
 
 object PredicateArgumentStructure {
