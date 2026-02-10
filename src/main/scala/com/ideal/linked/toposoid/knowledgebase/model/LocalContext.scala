@@ -22,18 +22,20 @@ import play.api.libs.json.{Json, OWrites, Reads}
 /**
  *
  * @param lang language locale
- * @param namedEntity named entity
+ * @param namedEntity named entity key:Entity, value:NER
  * @param rangeExpressions　Quantity range representation
  * @param categories Category (For Japanese, see the KNP feature category)
  * @param domains Domain (For Japanese, refer to KNP's feature domain)
  * @param knowledgeFeatureReference feature's information
+ * @param properNouns proper nouns key:proper noun, value:id Not used in the community version 
  */
 case class LocalContext(lang:String,
-                        namedEntity: String,
+                        namedEntities: Map[String, String],
                         rangeExpressions: Map[String, Map[String, String]],
                         categories: Map[String, String],
                         domains: Map[String, String],
-                        knowledgeFeatureReferences: List[KnowledgeFeatureReference]
+                        knowledgeFeatureReferences: List[KnowledgeFeatureReference],
+                        properNouns: Map[String, String]
                        )
 
 object LocalContext {
