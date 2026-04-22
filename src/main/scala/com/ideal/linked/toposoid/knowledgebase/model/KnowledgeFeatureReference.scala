@@ -29,7 +29,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  * @param extentText
  * @param similarityMap
  */
-case class KnowledgeFeatureReference(propositionId:String, sentenceId:String, featureId:String, featureType:Int, url:String = "", source:String = "", featureInputType:Int = 0, extentText:String = "{}", similarityMap:Map[String, Float] = Map.empty[String, Float])
+case class KnowledgeFeatureReference(propositionId:String, sentenceId:String, featureId:String, featureType:Int, url:String = "", source:String = "", featureInputType:Int = 0, extentText:String = "{}")
 
 object KnowledgeFeatureReference {
   implicit val jsonWrites: OWrites[KnowledgeFeatureReference] = Json.writes[KnowledgeFeatureReference]
