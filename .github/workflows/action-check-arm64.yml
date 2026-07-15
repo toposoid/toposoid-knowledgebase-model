@@ -1,0 +1,23 @@
+name: Header Check
+on:
+  workflow_call:
+env:
+  PJ_ACTOR: toposoid
+  PJ_REPO: toposoid-knowledgebase-model
+  PJ_BRANCH: feature
+  PJ_VERSION: 0.7-SNAPSHOT
+jobs:
+  header-check_toposoid-knowledgebase-model-amd64:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Clone ${{ env.PJ_REPO }}
+        uses: actions/checkout@v4
+        with:
+            repository: ${{ env.PJ_ACTOR }}/${{ env.PJ_REPO }}
+      - name: Execute tests
+        run: |
+            cd ${GITHUB_WORKSPACE} && cd ../
+            cd ./${{ env.PJ_REPO }}
+            docker build --build-arg TARGET_BRANCH=${{ env.PJ_BRANCH }} --tag ${{ env.PJ_REPO }}:${{ env.PJ_VERSION }} -f Dockerfile-workflow .
+            docker compose -f docker-compose-workflow.yml up -d
+            docker compose -f docker-compose-workflow.yml exec -T ${{ env.PJ_REPO }} bash -c "cd ${{ env.PJ_REPO }} && sbt headerCheck"
