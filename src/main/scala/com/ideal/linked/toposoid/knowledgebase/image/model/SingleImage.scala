@@ -21,8 +21,9 @@ import play.api.libs.json.{Json, OWrites, Reads}
 
 /**
   * For creating feature vectors from ImageData.
-  * Used in: toposoid-common-image-recognition-web
-  *
+  * Used in:
+  * - toposoid-common-image-recognition-web
+  * - toposoid-feature-vectorizer
   * @param url
   */
 case class SingleImage(url:String)

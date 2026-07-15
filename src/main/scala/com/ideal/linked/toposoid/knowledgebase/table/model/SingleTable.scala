@@ -20,8 +20,9 @@ package com.ideal.linked.toposoid.knowledgebase.table.model
 import play.api.libs.json.{Json, OWrites, Reads}
 /**
   * For creating feature vectors from TableData.
-  * Used in: toposoid-common-table-recognition-web
-  *
+  * Used in: 
+  * - toposoid-common-table-recognition-web
+  * - toposoid-feature-vectorizer
   * @param url
   */
 case class SingleTable(url:String)
