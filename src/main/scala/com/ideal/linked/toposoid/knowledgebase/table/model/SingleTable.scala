@@ -15,19 +15,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.image.model
+package com.ideal.linked.toposoid.knowledgebase.table.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
-
 /**
-  * For creating feature vectors from ImageData.
-  * Used in: toposoid-common-image-recognition-web
+  * For creating feature vectors from TableData.
+  * Used in: toposoid-common-table-recognition-web
   *
   * @param url
   */
-case class SingleImage(url:String)
+case class SingleTable(url:String)
 
-object SingleImage {
-  implicit val jsonWrites: OWrites[SingleImage] = Json.writes[SingleImage]
-  implicit val jsonReads: Reads[SingleImage] = Json.reads[SingleImage]
+object SingleTable {
+  implicit val jsonWrites: OWrites[SingleTable] = Json.writes[SingleTable]
+  implicit val jsonReads: Reads[SingleTable] = Json.reads[SingleTable]
 }
