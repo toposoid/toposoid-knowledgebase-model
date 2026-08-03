@@ -23,7 +23,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
  *
  * @param reference
  */
-case class TableReference(reference:Reference, separator:String="", skipRows:List[Int]=List.empty[Int], isExcel:Boolean=false, multiHeaderRows:Int=1, sheetName:String="" )
+case class TableReference(reference:Reference, skipHeaderRows:Int = 0, skipRowList:List[Int] = List.empty[Int], multiHeaderRowsForExcel:Int = 1, sheetNameForExcel:String = "")
 object TableReference {
   implicit val jsonWrites: OWrites[TableReference] = Json.writes[TableReference]
   implicit val jsonReads: Reads[TableReference] = Json.reads[TableReference]
