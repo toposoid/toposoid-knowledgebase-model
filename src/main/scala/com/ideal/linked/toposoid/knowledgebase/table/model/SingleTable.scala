@@ -25,7 +25,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
   * - toposoid-feature-vectorizer
   * @param url
   */
-case class SingleTable(url:String, skipHeaderRows:Int = 0, skipRowList:List[Int] = List.empty[Int], multiHeaderRows:Int = 1, sheetNameForExcel:String = "")
+case class SingleTable(url:String, hyperParameters:Map[String,String]=Map.empty[String, String])
 
 object SingleTable {
   implicit val jsonWrites: OWrites[SingleTable] = Json.writes[SingleTable]
