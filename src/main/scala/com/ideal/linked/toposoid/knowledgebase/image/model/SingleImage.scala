@@ -26,7 +26,7 @@ import play.api.libs.json.{Json, OWrites, Reads}
   * - toposoid-feature-vectorizer
   * @param url
   */
-case class SingleImage(url:String, x:Int=0, y:Int=0, width:Int=0, height:Int=0)
+case class SingleImage(url:String, hyperParameters:Map[String,String]=Map.empty[String, String])
 
 object SingleImage {
   implicit val jsonWrites: OWrites[SingleImage] = Json.writes[SingleImage]
