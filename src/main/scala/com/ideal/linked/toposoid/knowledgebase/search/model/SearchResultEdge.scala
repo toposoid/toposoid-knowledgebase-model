@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.search
+package com.ideal.linked.toposoid.knowledgebase.search.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 
