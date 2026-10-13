@@ -15,13 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.search
+package com.ideal.linked.toposoid.knowledgebase.search.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
+import com.ideal.linked.toposoid.knowledgebase.regist.model.TableReference
 
-case class InputSentenceForSearch(sentence:String, lang:String, similarityThreshold:Float)
-object InputSentenceForSearch {
-  implicit val jsonWrites: OWrites[InputSentenceForSearch] = Json.writes[InputSentenceForSearch]
-  implicit val jsonReads: Reads[InputSentenceForSearch] = Json.reads[InputSentenceForSearch]
+case class InputTableForSearch(tableReference: TableReference, similarityThreshold:Float)
+object InputTableForSearch {
+  implicit val jsonWrites: OWrites[InputTableForSearch] = Json.writes[InputTableForSearch]
+  implicit val jsonReads: Reads[InputTableForSearch] = Json.reads[InputTableForSearch]
 }
 
