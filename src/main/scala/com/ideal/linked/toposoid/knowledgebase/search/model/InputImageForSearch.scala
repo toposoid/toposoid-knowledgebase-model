@@ -15,12 +15,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.ideal.linked.toposoid.knowledgebase.search
+package com.ideal.linked.toposoid.knowledgebase.search.model
 
 import play.api.libs.json.{Json, OWrites, Reads}
 import com.ideal.linked.toposoid.knowledgebase.regist.model.ImageReference
 
-case class InputImageForSearch(imageReference: ImageReference, lang:String, similarityThreshold:Float)
+case class InputImageForSearch(imageReference: ImageReference, similarityThreshold:Float)
 object InputImageForSearch {
   implicit val jsonWrites: OWrites[InputImageForSearch] = Json.writes[InputImageForSearch]
   implicit val jsonReads: Reads[InputImageForSearch] = Json.reads[InputImageForSearch]
